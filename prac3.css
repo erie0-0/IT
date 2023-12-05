@@ -1,0 +1,15 @@
+.info{
+    text-align:justify;
+    border: solid black;
+    width: 50%;
+    height: 30%;
+    padding: 20px;
+    margin: auto;
+    font-style: normal;
+    font-family: 'Times New Roman';
+    font-size: medium;
+    background-color: burlywood;
+}
+body{
+    background-color: bisque;
+}
