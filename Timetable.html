@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>QUESTION 4</title>
+<body>
+    <script>
+        let n = prompt("Enter number:", 2);
+        let m = parseInt(n);
+        var x;
+        let size = 1;
+        function tables() {
+            var color = ["red", "blue", "green", "black", "magenta", "cyan", "yellow", "orange", "purple", "pink"];
+            var rand = Math.floor((Math.random() * 10) + 1);
+            if (m > 10) { 
+                clearInterval(time);
+                    
+            }
+            for (let j = 1; j <= 10; j++) {
+                x = m * j;
+                var table = (m+"*"+ j +"="+ x);
+                document.write(table.fontsize(size+1).fontcolor(color[rand]));
+                document.write("<br>");
+
+            }
+            m+=1;
+            size = size + 1;
+            document.write("<br>");
+            //clearInterval(time);
+            //var time=setTimeout(5000);
+        }
+            //clearTimeout(time);
+        function timer() {
+            var time = setInterval(tables, 5000);
+        }
+        timer();
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PET INFORMATION</title>
+</head>
+<body>
+
+    
+        <form id = "form">
+       
+            Name <input type="text" id = "1" name="Name"><br><br>
+            Age <input type ="number" id = "2" name = "Age"><br><br>
+            Weight <input type="number" id = "3" name = "Weight"><br><br>
+            Type <input type="text" id = "4" name = "Type"><br><br>
+            What It Likes Most <input type = "text" id = 5 name = "LikesMost"><br><br>
+            <button type="submit" id = "submit">SUBMIT</button>
+          
+        </form>
+
+
+    
+
+     <!-- <script> 
+        
+        function abc()
+        {
+                event.preventDefault()
+                var petname = document.getElementById("1").value
+                var age = document.getElementById("2").value;
+                var weight = document.getElementById("3").value;
+                var type = document.getElementById("4").value;
+                var likesmost = document.getElementById("5").value;
+
+                pet = {
+                Name: petname,
+                Age: age,
+                Weight: weight,
+                Type: type,
+                LikesMost: likesmost
+                }
+
+        console.log(pet)  
+        console.log(JSON.stringify(pet))
+        }
+
+
+     </script> -->
+  
+    <script>
+        document.getElementById("submit").addEventListener("click", function(event)
+        {
+            event.preventDefault();
+            var n = document.getElementById("form").length 
+            const ob = {} 
+            for(var i = 1 ; i < n; i++){
+                console.log(i)
+                console.log(document.getElementsByTagName("input"));
+                ob[document.getElementById(i).name] = document.getElementById(i).value
+                console.log("pet Obj",ob)   
+        }}
+        )
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+ {
+    "pet1" : {  "Name": "Shiro",
+                "Age": "7", 
+                "Weight": "7", 
+                "Type": "husky",
+                "LikesMost": "food"},
+
+    "pet2": {"Name": "lolo",
+            "Age": "5",
+            "Weight": "7",
+            "Type": "pug",
+            "LikesMost": "treats"},
+
+    "pet3" : {  "Name": "kuro", 
+                "Age": "5", 
+                "Weight": "7",
+                "Type": "fox",
+                "LikesMost": "humans"} }
