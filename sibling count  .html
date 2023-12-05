@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1">
+        <p>para 1</p>
+        <p>para 2</p>
+        <p>para 3</p>
+        <p>para 4</p>
+        <div>divc 1</div>
+        <div>divc 2</div>
+        <div>divc 3</div>
+    </div>
+    <p>op1</p>
+    <p>op2</p>
+    <script>
+        var ele = document.getElementById("div1");
+        
+
+         // Find the div with id "div1"
+    var div1 = document.getElementById("div1");
+
+// Find the first paragraph inside div1
+var firstPara = div1.firstElementChild;
+// Initialize a counter for sibling paragraphs
+var siblingCount = 0;
+
+// Loop through the child nodes of div1
+for (var i = 0; i < div1.childNodes.length; i++) {
+    var child = div1.childNodes[i];
+
+    // Check if the child node is a paragraph and not the first paragraph itself
+    if (child.nodeName === 'P' && child !== firstPara) {
+        siblingCount++;
+    }
+}
+
+// Print the count
+console.log("Number of sibling paragraphs: " + siblingCount);
+        
+    </script>
+</body>
+</html>
