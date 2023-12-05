@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignIn and SignUp</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #3498db;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            margin-left: 20px;
+            color: #fff;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 10px 5px 5px black;
+            margin-bottom: 20px;
+            max-width: 400px;
+            width: 100%;
+            margin-right: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div id ="signinForm">
+        <h1>Log In </h1>
+        <form action="/signin" method="post">
+            <label for="signinUsername">Username:</label>
+            <input type="text" id="signinUsername" placeholder="Enter Username" name="username" required>
+            <br>
+            <label for="signinPassword">Password:</label>
+            <input type="password" id="signinPassword" placeholder="Enter Password" name="password" required>
+            <br>
+            <button type="submit">SignIn</button>
+            <button onclick="showSignUpForm()">SignUp</button>
+        </form>
+    </div>
+    
+    <div id="signupForm">
+        <h1>Sign Up </h1>
+        <form action="/signup" method="post">
+            <label for="email">Email: </label>
+            <input type="text" id="email" placeholder="Enter Email" name="email" required>
+            <br>
+            <label for="signupUsername">Username:</label>
+            <input type="text" id="signupUsername" placeholder="Enter Username" name="username" required>
+            <br>
+            <label for="signupPassword">Password:</label>
+            <input type="password" id="signupPassword" placeholder="Enter Password" name="password" required>
+            <br>
+            <label for="psw-repeat">Repeat Password: </label>
+            <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+            <br>
+            <button type="submit">SignUp</button>
+            <button onclick="showSignInForm()">SignIn</button>
+        </form>
+    </div>
+    
+    <script>
+        document.getElementById('signupForm').style.display = 'none';
+
+        function showSignInForm() {
+            document.getElementById('signupForm').style.display = 'none';
+            document.getElementById('signinForm').style.display = 'block';
+        }
+
+        function showSignUpForm() {
+            document.getElementById('signupForm').style.display = 'block';
+            document.getElementById('signinForm').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
