@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .form-container {
+            border: 2px solid #3498db;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            width: 400px;
+            background-color: #fff;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        input[type="number"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        input[type="text"]:hover,
+        input[type="password"]:hover,
+        input[type="email"]:hover,
+        input[type="number"]:hover,
+        textarea:hover,
+        select:hover {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        .button-group {
+            margin-top: 20px;
+        }
+
+        .button-group button {
+            margin-right: 10px;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .button-group button:hover {
+            background-color: #258cd1;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <form>
+            <label for="name">Question 1:</label>
+            <input type="text" id="name" name="name" placeholder="Answer 1">
+
+            <label for="email">Question 2:</label>
+            <input type="email" id="email" name="email" placeholder="Answer 2">
+
+            <label>Question 3:</label>
+            <div class="radio-group">
+                <input type="radio" id="radio1" name="question3" value="option1">
+                <label for="radio1">Option 1</label>
+                <input type="radio" id="radio2" name="question3" value="option2">
+                <label for="radio2">Option 2</label>
+            </div>
+
+            <label>Question 4:</label>
+            <div class="checkbox-group">
+                <input type="checkbox" id="checkbox1" name="question4" value="option1">
+                <label for="checkbox1">Option 1</label>
+                <input type="checkbox" id="checkbox2" name="question4" value="option2">
+                <label for="checkbox2">Option 2</label>
+            </div>
+            <label for="country">Question 5:</label>
+            <select id="country" name="question5">
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+            </select>
+
+            <label for="message">Question 6:</label>
+            <textarea id="message" name="question6" rows="4" placeholder="Answer"></textarea>
+
+            <div class="button-group">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
